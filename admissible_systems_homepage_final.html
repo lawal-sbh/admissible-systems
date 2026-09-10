@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Admissible Systems: Technical assurance for safety-critical assets operating under degradation, model mismatch, and limited sensing.">
+    <title>Admissible Systems — Evidence for Safety-Critical Decisions</title>
+    <style>
+        :root {
+            --text-primary: #1a1a1a;
+            --text-secondary: #4a4a4a;
+            --text-muted: #6b6b6b;
+            --background: #ffffff;
+            --background-alt: #f8f9fa;
+            --border: #e5e7eb;
+            --accent: #2563eb;
+            --max-width: 720px;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            line-height: 1.7;
+            color: var(--text-primary);
+            background: var(--background);
+            font-size: 16px;
+        }
+
+        .container {
+            max-width: var(--max-width);
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        header {
+            padding: 48px 0 32px;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .logo {
+            font-size: 20px;
+            font-weight: 600;
+            letter-spacing: -0.02em;
+            color: var(--text-primary);
+            margin-bottom: 8px;
+        }
+
+        .tagline {
+            font-size: 14px;
+            color: var(--text-muted);
+            font-weight: 400;
+        }
+
+        main {
+            padding: 48px 0;
+        }
+
+        h1 {
+            font-size: 36px;
+            font-weight: 600;
+            line-height: 1.2;
+            letter-spacing: -0.03em;
+            margin-bottom: 24px;
+            color: var(--text-primary);
+        }
+
+        h2 {
+            font-size: 22px;
+            font-weight: 600;
+            margin-top: 48px;
+            margin-bottom: 16px;
+            letter-spacing: -0.02em;
+        }
+
+        h3 {
+            font-size: 18px;
+            font-weight: 600;
+            margin-top: 32px;
+            margin-bottom: 12px;
+        }
+
+        p {
+            margin-bottom: 20px;
+            color: var(--text-secondary);
+        }
+
+        .hero-intro {
+            font-size: 18px;
+            line-height: 1.8;
+            color: var(--text-secondary);
+            margin-bottom: 32px;
+        }
+
+        .highlight-box {
+            background: var(--background-alt);
+            border-left: 3px solid var(--accent);
+            padding: 24px;
+            margin: 32px 0;
+            border-radius: 0 6px 6px 0;
+        }
+
+        .highlight-box p {
+            margin-bottom: 0;
+            font-style: italic;
+            color: var(--text-primary);
+        }
+
+        .principles {
+            margin: 40px 0;
+        }
+
+        .principle {
+            margin-bottom: 24px;
+        }
+
+        .principle-title {
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-bottom: 6px;
+        }
+
+        .principle-desc {
+            color: var(--text-secondary);
+            margin-bottom: 0;
+        }
+
+        .cta-section {
+            background: var(--background-alt);
+            padding: 40px;
+            margin: 48px 0;
+            border-radius: 8px;
+            text-align: center;
+        }
+
+        .cta-section h2 {
+            margin-top: 0;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background: var(--accent);
+            color: white;
+            padding: 14px 28px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: 500;
+            margin-top: 16px;
+            transition: background 0.2s;
+        }
+
+        .cta-button:hover {
+            background: #1d4ed8;
+        }
+
+        .cta-secondary {
+            display: block;
+            margin-top: 16px;
+            color: var(--text-muted);
+            font-size: 14px;
+            text-decoration: none;
+        }
+
+        .cta-secondary:hover {
+            text-decoration: underline;
+        }
+
+        .about-section {
+            margin-top: 48px;
+            padding-top: 48px;
+            border-top: 1px solid var(--border);
+        }
+
+        .about-section h2 {
+            margin-top: 0;
+        }
+
+        .founder-note {
+            background: var(--background-alt);
+            padding: 24px;
+            margin: 32px 0;
+            border-radius: 8px;
+        }
+
+        .founder-note p {
+            margin-bottom: 0;
+            color: var(--text-secondary);
+        }
+
+        footer {
+            padding: 32px 0;
+            border-top: 1px solid var(--border);
+            margin-top: 64px;
+        }
+
+        .footer-text {
+            font-size: 14px;
+            color: var(--text-muted);
+            text-align: center;
+        }
+
+        .email-link {
+            color: var(--accent);
+            text-decoration: none;
+        }
+
+        .email-link:hover {
+            text-decoration: underline;
+        }
+
+        @media (max-width: 640px) {
+            h1 {
+                font-size: 28px;
+            }
+
+            .hero-intro {
+                font-size: 16px;
+            }
+
+            .container {
+                padding: 0 20px;
+            }
+
+            header {
+                padding: 32px 0 24px;
+            }
+
+            main {
+                padding: 32px 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">Admissible Systems</div>
+            <div class="tagline">Technical assurance for safety-critical assets</div>
+        </div>
+    </header>
+
+    <main>
+        <div class="container">
+            <h1>We build the evidence layer between asset monitoring and safety-critical decisions</h1>
+
+            <p class="hero-intro">
+                Admissible Systems examines whether safety-relevant estimates, sensing architectures, and digital twins remain trustworthy when assets degrade, models are imperfect, and measurements are limited.
+            </p>
+
+            <div class="highlight-box">
+                <p>
+                    A certificate proves what was established. It does not automatically prove what remains true. Conventional assurance is strongest before commissioning, while continuous evidence about degradation and model validity is often much weaker during operation.
+                </p>
+            </div>
+
+            <p>
+                The risk is not only being wrong. It is being wrong with unjustified confidence. Admissible Systems tests the evidence behind the estimate.
+            </p>
+
+            <h2>The Admissible Systems approach</h2>
+
+            <div class="principles">
+                <div class="principle">
+                    <div class="principle-title">1. Bounds, not numbers</div>
+                    <p class="principle-desc">
+                        Point predictions cannot be wrong in a useful way. Decisions must be taken against conservative edges, with explicit uncertainty quantification.
+                    </p>
+                </div>
+
+                <div class="principle">
+                    <div class="principle-title">2. Model-mismatch resilience</div>
+                    <p class="principle-desc">
+                        Guarantees must hold when the model form is imperfect, since structural mismatch is the normal condition of real assets.
+                    </p>
+                </div>
+
+                <div class="principle">
+                    <div class="principle-title">3. Failure-capable validation</div>
+                    <p class="principle-desc">
+                        Tests must be able to fail. Acceptance criteria must be independently constructed, not tuned to pass.
+                    </p>
+                </div>
+
+                <div class="principle">
+                    <div class="principle-title">4. Sensing sufficiency</div>
+                    <p class="principle-desc">
+                        Instrumentation must be shown to observe the critical degradation states, not assumed to be adequate.
+                    </p>
+                </div>
+            </div>
+
+            <div class="founder-note">
+                <p>
+                    I spent over a decade in gas-turbine operations before moving into research on degradation and state estimation. The work grew from a practical problem: when operating conditions diverge from the assumptions behind an inspection interval, operators often have an opinion about the asset's condition—but not evidence strong enough to act on.
+                </p>
+            </div>
+
+            <div class="cta-section">
+                <h2>Research in progress</h2>
+                <p style="margin-bottom: 20px;">
+                    Admissible Systems is currently developing evidence-based methods for operational assurance under model mismatch and limited sensing.
+                </p>
+                <a href="mailto:hello@admissiblesystems.com" class="cta-button">Read the position paper</a>
+                <a href="mailto:hello@admissiblesystems.com" class="cta-secondary">or contact us for research collaboration</a>
+            </div>
+
+            <div class="about-section">
+                <h2>About</h2>
+                <p>
+                    Admissible Systems is a technical assurance practice for complex assets whose safety and performance depend on estimates made under degradation, model mismatch, and limited sensing.
+                </p>
+                <p>
+                    The practice grew from direct experience in gas-turbine operations, where the gap between design assumptions and operational reality became impossible to ignore. The work focuses on the question: when can an estimate, produced from imperfect models and limited measurements, be trusted enough to support a safety-relevant operational decision?
+                </p>
+                <p>
+                    Current research addresses degradation-aware state estimation, observability analysis, and uncertainty-bounded decision support for power generation, electrochemical systems, and industrial process equipment. All methods are presented with explicit assumptions, limitations, and validation status.
+                </p>
+                <p>
+                    Admissible Systems is not a certification body. Outputs are provided as technical evidence and decision support, suitable for engineering review and integration into existing assurance frameworks.
+                </p>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p class="footer-text">
+                Contact: <a href="mailto:hello@admissiblesystems.com" class="email-link">hello@admissiblesystems.com</a>
+            </p>
+            <p class="footer-text" style="margin-top: 12px;">
+                &copy; 2026 Admissible Systems. Research in progress.
+            </p>
+        </div>
+    </footer>
+</body>
+</html>

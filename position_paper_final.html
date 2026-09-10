@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="The Evidence Stops at Commissioning: Admissible Systems position paper on operational assurance under model mismatch and limited sensing.">
+    <title>The Evidence Stops at Commissioning — Admissible Systems</title>
+    <style>
+        :root {
+            --text-primary: #1a1a1a;
+            --text-secondary: #4a4a4a;
+            --text-muted: #6b6b6b;
+            --background: #ffffff;
+            --background-alt: #f8f9fa;
+            --border: #e5e7eb;
+            --accent: #2563eb;
+            --max-width: 720px;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            line-height: 1.7;
+            color: var(--text-primary);
+            background: var(--background);
+            font-size: 16px;
+        }
+
+        .container {
+            max-width: var(--max-width);
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        header {
+            padding: 48px 0 32px;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .logo {
+            font-size: 20px;
+            font-weight: 600;
+            letter-spacing: -0.02em;
+            color: var(--text-primary);
+            margin-bottom: 8px;
+            display: block;
+            text-decoration: none;
+        }
+
+        .logo:hover {
+            text-decoration: underline;
+        }
+
+        .tagline {
+            font-size: 14px;
+            color: var(--text-muted);
+            font-weight: 400;
+        }
+
+        main {
+            padding: 48px 0;
+        }
+
+        h1 {
+            font-size: 32px;
+            font-weight: 600;
+            line-height: 1.2;
+            letter-spacing: -0.03em;
+            margin-bottom: 16px;
+            color: var(--text-primary);
+        }
+
+        .subtitle {
+            font-size: 16px;
+            color: var(--text-muted);
+            margin-bottom: 48px;
+            font-style: italic;
+        }
+
+        h2 {
+            font-size: 22px;
+            font-weight: 600;
+            margin-top: 48px;
+            margin-bottom: 16px;
+            letter-spacing: -0.02em;
+        }
+
+        h3 {
+            font-size: 18px;
+            font-weight: 600;
+            margin-top: 32px;
+            margin-bottom: 12px;
+        }
+
+        p {
+            margin-bottom: 20px;
+            color: var(--text-secondary);
+        }
+
+        .highlight-box {
+            background: var(--background-alt);
+            border-left: 3px solid var(--accent);
+            padding: 24px;
+            margin: 32px 0;
+            border-radius: 0 6px 6px 0;
+        }
+
+        .highlight-box p {
+            margin-bottom: 0;
+            font-style: italic;
+            color: var(--text-primary);
+        }
+
+        .back-link {
+            display: inline-block;
+            margin-bottom: 32px;
+            color: var(--accent);
+            text-decoration: none;
+            font-size: 14px;
+        }
+
+        .back-link:hover {
+            text-decoration: underline;
+        }
+
+        footer {
+            padding: 32px 0;
+            border-top: 1px solid var(--border);
+            margin-top: 64px;
+        }
+
+        .footer-text {
+            font-size: 14px;
+            color: var(--text-muted);
+            text-align: center;
+        }
+
+        .email-link {
+            color: var(--accent);
+            text-decoration: none;
+        }
+
+        .email-link:hover {
+            text-decoration: underline;
+        }
+
+        @media (max-width: 640px) {
+            h1 {
+                font-size: 26px;
+            }
+
+            .container {
+                padding: 0 20px;
+            }
+
+            header {
+                padding: 32px 0 24px;
+            }
+
+            main {
+                padding: 32px 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <a href="index.html" class="logo">Admissible Systems</a>
+            <div class="tagline">Technical assurance for safety-critical assets</div>
+        </div>
+    </header>
+
+    <main>
+        <div class="container">
+            <a href="index.html" class="back-link">← Back to homepage</a>
+
+            <h1>The Evidence Stops at Commissioning</h1>
+            <p class="subtitle">A position paper on operational assurance under model mismatch and limited sensing</p>
+
+            <div class="highlight-box">
+                <p>
+                    I spent over a decade in gas turbine operations before moving into research on degradation and state estimation. My work is about inferring what is happening inside industrial equipment when you can only measure it from the outside — and, more particularly, about when those inferences are trustworthy enough to act on. Almost all of the assurance effort in safety-critical industries goes into proving a system is safe before it enters service. Very little goes into demonstrating it is still safe five years in. I write about that gap, and about what an estimate has to do before an engineer, a regulator or an underwriter should be willing to put weight on it.
+                </p>
+            </div>
+
+            <h2>The evidence stops at commissioning</h2>
+
+            <p>
+                For most of my career I worked in gas turbine operations, and one thing never sat right: the inspection interval.
+            </p>
+
+            <p>
+                The interval arrives from the OEM as a number. So many equivalent operating hours, then a borescope, then a hot-gas-path inspection. It is presented as a rule and treated as one. But it is a guess — a well-informed guess, built from fleet statistics and a set of assumptions about how the machine will be run. When your machine is not being run that way, and you know it is not, there is very little you can do with that knowledge. You cannot bring the interval forward without an argument, and you certainly cannot push it back without a better one. You have an opinion. You do not have evidence.
+            </p>
+
+            <p>
+                That gap runs through every safety-critical industry, and it is wider than most people outside operations realise.
+            </p>
+
+            <h2>Assurance ends at the certificate</h2>
+
+            <p>
+                There is an entire mature discipline devoted to proving a system is safe before it enters service. Requirements engineering, hazard analysis, traceability from requirement to test result, independent assessment, certification against IEC 61508 or ISO 26262 or DO-178C depending on your sector. Fifty years of methodology, a tooling industry, a profession. It works.
+            </p>
+
+            <p>
+                It also stops. The certificate is granted against an assumed degradation trajectory — an expectation about how the equipment will age under an expected duty. From the moment the asset enters service, nobody continuously demonstrates that the assumption still holds. What replaces that demonstration is a fixed inspection interval and a conservative margin: periodic snapshots, with a great deal of unexamined operation in between.
+            </p>
+
+            <p>
+                The cost of this is two-sided, which is why it is more than an engineering complaint. In the rare case, something degrades faster than assumed and is not caught between snapshots. In the ordinary case — far more common and far more expensive in aggregate — components are replaced while still serviceable, assets are derated that did not need derating, and capacity is left on the table to buy margin against an uncertainty nobody has quantified. The gap costs money every day and safety occasionally.
+            </p>
+
+            <h2>Why it has not been closed</h2>
+
+            <p>
+                Not for want of noticing. It persists because the thing you would need to close it is hard in a specific way.
+            </p>
+
+            <p>
+                The state you care about is not the state you measure. Degradation happens inside the machine: in a coating, at an interface, in a region of an electrode. What you have is terminal data — voltage, current, temperature, flow, vibration. So you need a model to get from one to the other.
+            </p>
+
+            <p>
+                And the model is wrong. Not slightly inaccurate. Structurally wrong: missing mechanisms nobody has characterised yet, geometry idealised, boundary conditions calibrated against experiments run under different conditions. This is not a criticism of anyone's modelling. It is the normal condition of modelling a real degrading asset.
+            </p>
+
+            <p>
+                A wrong model gives you two problems, and the second is worse than the first. It gives you a wrong estimate — expected, tolerable, often still useful. It also gives you a wrong <em>confidence</em> in that estimate. An estimate that is off but knows it is off is something you can work with; you widen your margin and carry on. An estimate that is off while reporting high confidence is worse than no estimate at all, because it will be believed.
+            </p>
+
+            <h2>Why AI has not filled it either</h2>
+
+            <p>
+                The obvious move is machine learning, and the industry has been making that move for a decade. It has not displaced a single inspection interval.
+            </p>
+
+            <p>
+                The usual diagnosis is accuracy, and the usual diagnosis is wrong. Modern ML is frequently <em>more</em> accurate than the physics model it competes with. The problem is admissibility. No certification framework accepts a learned component's judgement as evidence. The frameworks reaching for an answer — SOTIF, UL 4600, the emerging aviation guidance on machine learning — are provisional and none of them has solved it.
+            </p>
+
+            <p>
+                So these products get sold as advisory-only. They sit beside the safety system rather than inside it, they inform a human who remains fully accountable, and they can never take credit in the safety case. Which caps what anyone will pay for them, and explains a decade of promising pilots that changed no procedures.
+            </p>
+
+            <p>
+                Accuracy was never the binding constraint. Admissibility is.
+            </p>
+
+            <h2>What would make an estimate admissible</h2>
+
+            <p>
+                If an estimate is going to carry weight in a safety or life-extension decision, I think it has to do four things. None of them is about being right more often.
+            </p>
+
+            <p>
+                <strong>It has to be a bound, not a number.</strong> A point prediction cannot be wrong in a useful way. A bound can be checked, and a decision can be taken against the conservative edge of it rather than the middle.
+            </p>
+
+            <p>
+                <strong>The bound has to survive the model being wrong.</strong> Since structural mismatch is the normal condition rather than an edge case, a guarantee that holds only when the model form is correct is a guarantee about a situation that does not occur.
+            </p>
+
+            <p>
+                <strong>The test has to be capable of failing.</strong> This one is subtle and it is where a lot of published work quietly falls down. If you tune a filter until its own internal statistics look healthy, and then assess its health using those same statistics, you have built something that cannot fail its own test. An acceptance test has to be checked against an independently constructed threshold, and a method worth trusting is one where you can show the baseline failing it.
+            </p>
+
+            <p>
+                <strong>You have to be able to show the sensing was sufficient.</strong> An estimate derived from instrumentation that cannot observe the thing you care about is worthless regardless of how good the algorithm is. That sufficiency is a property you can establish and state, not something to assume because the sensor count looks reasonable.
+            </p>
+
+            <h2>Where I have got to</h2>
+
+            <p>
+                I have built one of these, for solid oxide electrolysis stacks, and I want to be precise about what that does and does not demonstrate.
+            </p>
+
+            <p>
+                A conventional filter on this problem produced accurate-looking estimates while failing a consistency test — the numbers looked fine and the reported confidence was not one the filter could keep. An adapted version passed that test, and passed it under two different omitted degradation mechanisms, which suggests the fix is not specific to the mechanism I happened to leave out.
+            </p>
+
+            <p>
+                On sensing: three probes placed without regard to the structure of the problem never recovered the life-limiting region — across every load profile I tested, including offshore wind across multiple years, onshore wind, solar, a demand-following profile and constant current. Not sometimes. Structurally, and independently of the resource. Four probes chosen with the structure in mind matched fully instrumented performance at that region. Placement dominated probe count, comprehensively.
+            </p>
+
+            <p>
+                All of this is in simulation, on one technology, without hardware validation. That is a real limitation and I would rather state it than have it discovered. The point is not that the problem is solved. The point is that the gap is specific enough to work on, and that the property that matters turns out to be an honest bound rather than a better prediction.
+            </p>
+
+            <h2>What this means for operations</h2>
+
+            <p>
+                The underlying problem generalises further than SOEC stacks. The estimator and the decision logic transfer directly to any asset whose degradation is inferred from terminal electrical measurements — batteries among them. The placement result does not transfer to lumped systems, and I will say so rather than sell it.
+            </p>
+
+            <p>
+                The problem is not solved. It is specific enough to work on, and the property that matters turns out to be an honest bound rather than a better prediction.
+            </p>
+
+            <h2>Collaboration</h2>
+
+            <p>
+                I would be glad to hear from anyone working the same seam from a different direction — particularly anyone with field data on assets degrading faster or slower than their certificates assumed.
+            </p>
+
+            <p>
+                Research collaboration, field-data discussions and technical disagreement all welcome.
+            </p>
+
+            <p>
+                Contact: <a href="mailto:hello@admissiblesystems.com" class="email-link">hello@admissiblesystems.com</a>
+            </p>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p class="footer-text">
+                &copy; 2026 Admissible Systems. Research in progress.
+            </p>
+        </div>
+    </footer>
+</body>
+</html>
